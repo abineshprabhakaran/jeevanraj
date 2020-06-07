@@ -1,0 +1,341 @@
+/* Preloader  */
+
+#world {
+    background: #fff;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    z-index:9999;
+    transition:1s;
+}
+
+/* End of Preloader  */
+
+.activeMenu {
+    color: #444444 !important;
+}
+
+.activeMenu:after {
+    width: 100%;
+    height: 10px;
+    background-color: #FFD500;
+    content: "";
+    position: absolute;
+    bottom: 5px;
+    left: 0;
+    z-index: -1;
+}
+
+.menu {
+    color: #888888;
+}
+
+.menu:hover:after {
+    width: 100%;
+}
+
+.menu:hover {
+    color: #444444;
+}
+
+.menu:after {
+    height: 10px;
+    background-color: #FFD500;
+    content: "";
+    position: absolute;
+    bottom: 5px;
+    left: 0;
+    z-index: -1;
+    width: 0;
+    -webkit-transition: width 0.5s;
+    transition: width 0.5s;
+}
+
+.firstSection {
+    height:100vh;
+    background-image: url('../images/yellow-rectangle.png');
+    background-size: 38% !important;
+    background-repeat: no-repeat !important;
+    background-position: top left !important;
+    padding: 3%;
+}
+
+.jeevanImage {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    height: 100%;
+    z-index: 999;
+}
+
+.bannerFontBig {
+    font-size: 10vh;
+}
+
+.bannerFontMedium {
+    font-size: 6vh;
+}
+
+.lightGreyColor {
+    color: #444444;
+}
+
+/* Preloader  */
+.loader{
+    position: absolute !important;
+    top:50%;
+    right:50%;
+}
+.loader,
+.loader:before,
+.loader:after {
+  background: #FFD500;
+  -webkit-animation: load1 1s infinite ease-in-out;
+  animation: load1 1s infinite ease-in-out;
+  width: 1em;
+  height: 4em;
+}
+.loader {
+  color: #FFD500;
+  text-indent: -9999em;
+  margin: 88px auto;
+  position: relative;
+  font-size: 11px;
+  -webkit-transform: translateZ(0);
+  -ms-transform: translateZ(0);
+  transform: translateZ(0);
+  -webkit-animation-delay: -0.16s;
+  animation-delay: -0.16s;
+}
+.loader:before,
+.loader:after {
+  position: absolute;
+  top: 0;
+  content: '';
+}
+.loader:before {
+  left: -1.5em;
+  -webkit-animation-delay: -0.32s;
+  animation-delay: -0.32s;
+}
+.loader:after {
+  left: 1.5em;
+}
+@-webkit-keyframes load1 {
+  0%,
+  80%,
+  100% {
+    box-shadow: 0 0;
+    height: 4em;
+  }
+  40% {
+    box-shadow: 0 -2em;
+    height: 5em;
+  }
+}
+@keyframes load1 {
+  0%,
+  80%,
+  100% {
+    box-shadow: 0 0;
+    height: 4em;
+  }
+  40% {
+    box-shadow: 0 -2em;
+    height: 5em;
+  }
+}
+
+.banner {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.banner .box {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+.banner .box .title {
+  width: 100%;
+  position: relative;
+  display: flex;
+  align-items: center;
+  height: 50px;
+}
+.banner .box .title .block {
+  width: 0%;
+  height: inherit;
+  background: #ffb510;
+  position: absolute;
+  animation: mainBlock 2s cubic-bezier(0.74, 0.06, 0.4, 0.92) forwards;
+  display: flex;
+}
+.banner .box .title h1 {
+  color: #000;
+  font-size: 10vh;
+  -webkit-animation: mainFadeIn 2s forwards;
+  -o-animation: mainFadeIn 2s forwards;
+  animation: mainFadeIn 2s forwards;
+  animation-delay: 1.6s;
+  opacity: 0;
+  display: flex;
+  align-items: baseline;
+  position: relative;
+}
+.banner .box .title h1 span {
+  width: 0px;
+  height: 0px;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  border-radius: 50%;
+  background: #FFD500;
+  -webkit-animation: load 0.6s cubic-bezier(0.74, 0.06, 0.4, 0.92) forwards;
+  animation: popIn 0.8s cubic-bezier(0.74, 0.06, 0.4, 0.92) forwards;
+  animation-delay: 2s;
+  margin-left: 5px;
+  margin-top: -10px;
+  position: absolute;
+  bottom: 13px;
+  right: -12px;
+}
+.banner .box .role {
+  width: 100%;
+  position: relative;
+  display: flex;
+  align-items: center;
+  height: 30px;
+  margin-top: 40px;
+}
+.banner .box .role .block {
+  width: 0%;
+  height: inherit;
+  background: #FFD500;
+  position: absolute;
+  animation: secBlock 2s cubic-bezier(0.74, 0.06, 0.4, 0.92) forwards;
+  animation-delay: 1s;
+  display: flex;
+}
+.banner .box .role p {
+  animation: secFadeIn 2s forwards;
+  animation-delay: 1s;
+  opacity: 0;
+  color: #000;
+  font-size: 5vh;
+  text-transform: uppercase;
+  letter-spacing: 5px;
+}
+.banner .box .role .aboutContent {
+  animation: secFadeIn 2s forwards;
+  animation-delay: 2s;
+  opacity: 0;
+  color: #000;
+  font-size: 16px;
+  letter-spacing: 2px;
+  text-transform:inherit !important;
+}
+
+@keyframes mainBlock {
+  0% {
+    width: 0%;
+    left: 0;
+  }
+  50% {
+    width: 100%;
+    left: 0;
+  }
+  100% {
+    width: 0;
+    left: 100%;
+  }
+}
+@keyframes secBlock {
+  0% {
+    width: 0%;
+    left: 0;
+  }
+  50% {
+    width: 100%;
+    left: 0;
+  }
+  100% {
+    width: 0;
+    left: 100%;
+  }
+}
+@keyframes mainFadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes popIn {
+  0% {
+    width: 0px;
+    height: 0px;
+    background: #e9d856;
+    border: 0px solid #ddd;
+    opacity: 0;
+  }
+  50% {
+    width: 10px;
+    height: 10px;
+    background: #e9d856;
+    opacity: 1;
+    bottom: 45px;
+  }
+  65% {
+    width: 7px;
+    height: 7px;
+    bottom: 0px;
+    width: 15px;
+  }
+  80% {
+    width: 10px;
+    height: 10px;
+    bottom: 20px;
+  }
+  100% {
+    width: 7px;
+    height: 7px;
+    background: #e9d856;
+    border: 0px solid #222;
+    bottom: 13px;
+  }
+}
+@keyframes secFadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 0.5;
+  }
+}
+@keyframes top {
+  0% {
+    opacity: 0;
+    bottom: -80px;
+  }
+  100% {
+    opacity: 1;
+    bottom: 0px;
+  }
+}
+@keyframes icon {
+  0% {
+    opacity: 0;
+    transform: scale(0);
+  }
+  50% {
+    opacity: 1;
+    transform: scale(1.3) rotate(-2deg);
+  }
+  100% {
+    opacity: 1;
+    bottom: 0px;
+  }
+}

@@ -1,3 +1,46 @@
+/* Fonts  */
+@font-face {
+  font-family: 'Playfair-Bold';
+  src: url('../fonts/PlayfairDisplay-Bold.ttf');
+}
+@font-face {
+  font-family: 'Campton-Light';
+  src: url('../fonts/Campton-Light.ttf');
+}
+@font-face {
+  font-family: 'Campton-Bold';
+  src: url('../fonts/Campton-Bold.ttf');
+}
+@font-face {
+  font-family: 'Campton-SemiBold';
+  src: url('../fonts/campton-semibold.ttf');
+}
+@font-face {
+  font-family: 'Campton-Medium';
+  src: url('../fonts/Campton-Medium.ttf');
+}
+@font-face {
+  font-family: 'Campton-LightItalic';
+  src: url('../fonts/Campton-LightItalic.ttf');
+}
+body{
+  font-family: 'Campton-Light' !important;
+}
+.semiBoldFont{
+  font-family: 'Campton-SemiBold' !important;
+}
+.boldFont{
+  font-family: 'Campton-Bold' !important;
+}
+.mediumFont{
+  font-family: 'Campton-Medium' !important;
+}
+.italicFont{
+  font-family: 'Campton-LightItalic' !important;
+}
+.boldFont-Play{
+  font-family: 'Playfair-Bold' !important;
+}
 /* Preloader  */
 
 #world {
@@ -11,7 +54,12 @@
 }
 
 /* End of Preloader  */
-
+.lsp-1{
+letter-spacing: 1.2px;
+}
+.lsp-05{
+  letter-spacing: 0.54px;
+}
 .activeMenu {
   color: #444444 !important;
 }
@@ -25,6 +73,10 @@
   bottom: 5px;
   left: 0;
   z-index: -1;
+}
+.activeHeader{
+  background-color: #fff;
+  box-shadow: -3px 0px 0px 1px #0000000f;
 }
 
 .menu, .viewMenu {
@@ -67,7 +119,7 @@
 
 .firstSection {
   height: 100vh;
-  background-image: url('../images/yellow-rectangle.png');
+  background-image: url('../images/yellow-rectangle.svg');
   background-size: 38% !important;
   background-repeat: no-repeat !important;
   background-position: top left !important;
@@ -415,4 +467,19 @@
 }
 .graphicMargin{
   margin-top:-200px;
+}
+.jusEnd{
+  justify-content: flex-end;
+}
+.jusBetween{
+  justify-content: space-between;
+}
+.logo{
+  height: 40px;
+}
+.logoContainer{
+  display:none;
+}
+.logoContainerBlock{
+  display: block;
 }

@@ -336,7 +336,7 @@ body {
   text-transform: inherit !important;
 }
 
-.banner .viewProfileButton {
+.viewButtonAnimation{
   animation: secFadeIn 2s forwards;
   animation-delay: 2.2s;
   opacity: 0;

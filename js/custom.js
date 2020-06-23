@@ -2,7 +2,7 @@
     var myDiv = document.getElementById("world"),
         show = function () {
             myDiv.style.display = "block";
-            setTimeout(hide, 5000);
+            setTimeout(hide, 8000);
         },
         hide = function () {
             myDiv.style.display = "none";
@@ -13,7 +13,7 @@
 $(document).ready(function () {
     setTimeout(function () {
         $("#mainPage").show();
-    }, 5000);
+    }, 8000);
 });
 
 $(window).on("scroll", function () {

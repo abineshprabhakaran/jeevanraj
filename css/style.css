@@ -1,46 +1,63 @@
 /* Fonts  */
+
 @font-face {
   font-family: 'Playfair-Bold';
   src: url('../fonts/PlayfairDisplay-Bold.ttf');
 }
+
 @font-face {
   font-family: 'Campton-Light';
   src: url('../fonts/Campton-Light.ttf');
 }
+
 @font-face {
   font-family: 'Campton-Bold';
   src: url('../fonts/Campton-Bold.ttf');
 }
+
 @font-face {
   font-family: 'Campton-SemiBold';
   src: url('../fonts/campton-semibold.ttf');
 }
+
 @font-face {
   font-family: 'Campton-Medium';
   src: url('../fonts/Campton-Medium.ttf');
 }
+
 @font-face {
   font-family: 'Campton-LightItalic';
   src: url('../fonts/Campton-LightItalic.ttf');
 }
-body{
+
+* {
+  outline: none !important;
+}
+
+body {
   font-family: 'Campton-Light' !important;
 }
-.semiBoldFont{
+
+.semiBoldFont {
   font-family: 'Campton-SemiBold' !important;
 }
-.boldFont{
+
+.boldFont {
   font-family: 'Campton-Bold' !important;
 }
-.mediumFont{
+
+.mediumFont {
   font-family: 'Campton-Medium' !important;
 }
-.italicFont{
+
+.italicFont {
   font-family: 'Campton-LightItalic' !important;
 }
-.boldFont-Play{
+
+.boldFont-Play {
   font-family: 'Playfair-Bold' !important;
 }
+
 /* Preloader  */
 
 #world {
@@ -54,14 +71,23 @@ body{
 }
 
 /* End of Preloader  */
-.lsp-1{
-letter-spacing: 1.2px;
+
+.lsp-1 {
+  letter-spacing: 1.2px;
 }
-.lsp-05{
+
+.lsp-05 {
   letter-spacing: 0.54px;
 }
+
 .activeMenu {
   color: #444444 !important;
+}
+
+.header {
+  animation: secFadeIn 2s forwards;
+  animation-delay: 0.5s;
+  opacity: 0;
 }
 
 .activeMenu:after {
@@ -74,7 +100,8 @@ letter-spacing: 1.2px;
   left: 0;
   z-index: -1;
 }
-.activeHeader{
+
+.activeHeader {
   background-color: #fff;
   box-shadow: -3px 0px 0px 1px #0000000f;
 }
@@ -124,14 +151,9 @@ letter-spacing: 1.2px;
   background-repeat: no-repeat !important;
   background-position: top left !important;
   padding: 3%;
-}
-
-.jeevanImage {
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  height: 100%;
-  z-index: 999;
+  animation: secFadeIn 2s forwards;
+  animation-delay: 0.3s;
+  opacity: 0;
 }
 
 .bannerFontBig {
@@ -314,6 +336,16 @@ letter-spacing: 1.2px;
   text-transform: inherit !important;
 }
 
+.banner .viewProfileButton {
+  animation: secFadeIn 2s forwards;
+  animation-delay: 2.2s;
+  opacity: 0;
+}
+
+.viewProfileButton img {
+  height: 25px;
+}
+
 @keyframes mainBlock {
   0% {
     width: 0%;
@@ -393,7 +425,7 @@ letter-spacing: 1.2px;
     opacity: 0;
   }
   100% {
-    opacity: 0.5;
+    opacity: 1;
   }
 }
 
@@ -428,8 +460,8 @@ letter-spacing: 1.2px;
   border: 1px solid #444444;
   color: #444444 !important;
   border-radius: 40px;
-  padding: 7px 20px 7px 20px;
-  width: 180px;
+  padding: 7px 15px 7px 20px;
+  width: 170px;
 }
 
 .commonSection {
@@ -465,21 +497,225 @@ letter-spacing: 1.2px;
   margin-top: -140px;
   margin-left: -90px;
 }
-.graphicMargin{
-  margin-top:-200px;
+
+.graphicMargin {
+  margin-top: -200px;
 }
-.jusEnd{
+
+.jusEnd {
   justify-content: flex-end;
 }
-.jusBetween{
+
+.jusBetween {
   justify-content: space-between;
 }
-.logo{
+
+.logo {
   height: 40px;
 }
-.logoContainer{
+
+.logoContainer {
+  display: none;
+}
+
+.logoContainerBlock {
+  display: block;
+}
+
+.sliderImage {
+  animation: secFadeIn 2s forwards;
+  animation-delay: 0.5s;
+  opacity: 0;
+}
+
+.btn {
+  position: relative;
+  display: inline-block;
+  width: 180px;
+  height: 40px;
+  font-size: 1em;
+  background-color: transparent;
+  cursor: pointer;
+  text-decoration: none;
+}
+
+.btn svg {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.btn svg rect {
+  //stroke: #EC0033;
+  stroke-width: 1;
+  stroke-dasharray: 200, 0;
+  stroke-dashoffset: 0;
+  -webkit-transition: all 600ms ease;
+  transition: all 600ms ease;
+}
+
+.btn:hover svg rect {
+  stroke-width: 1;
+  stroke-dasharray: 100, 543;
+  stroke-dashoffset: 437;
+}
+.viewProfile{
+  line-height:2.4;
+}
+ /* Arrow Hover animation  */
+ 
+ .arrowButton .arrow {
+  background: #222222;
+  height: 1px;
+  width: 30px;
+  margin: 0 auto;
+  position: relative;
+  cursor: pointer;
+  transition: all 0.1s ease-in-out;
+  opacity: 0;
+  visibility: hidden;
+  transform: translate(-30px, 0px);
   display:none;
 }
-.logoContainerBlock{
-  display: block;
+.arrowButton .arrow:before, .arrowButton .arrow:after {
+  content: "";
+  background: #222222;
+  position: absolute;
+  height: 1px;
+  width: 15px;
+  visibility: hidden;
+  opacity: 0;
+  transition: all 0.1s ease-in-out;
+}
+.arrowButton .arrow:before {
+  right: -2px;
+  bottom: -5px;
+  transform: rotate(-45deg);
+}
+.arrowButton .arrow:after {
+  right: -2px;
+  top: -5px;
+  transform: rotate(45deg);
+}
+.arrowButton:hover .arrow:before, .arrowButton:hover .arrow:after {
+  opacity: 1;
+  visibility: visible;
+}
+
+.arrowButton:hover .arrow {
+  opacity: 1;
+  visibility: visible;
+  transform: translate(0px, 0px);
+  display:block;
+}
+.arrowButton:hover .arrow:before {
+  animation: animation-3-before 1s ease 0s 1 alternate both;
+}
+.arrowButton:hover .arrow:after {
+  animation: animation-3-after 1s ease 0s 1 alternate both;
+}
+
+@keyframes animation-3-after {
+  0% {
+    right: -3px;
+    top: -4px;
+    transform: rotate(45deg);
+    background: #FFD500;
+  }
+  25% {
+    width: 3px;
+    border-radius: 50%;
+    top: 20px;
+    left: 15px;
+  }
+  75% {
+    width: 3px;
+    border-radius: 50%;
+    top: -20px;
+    left: 15px;
+  }
+  100% {
+    right: -2px;
+    bottom: -5px;
+    transform: rotate(-135deg);
+    height: 1px;
+    width: 15px;
+    background: #222222;
+  }
+}
+@keyframes animation-3-before {
+  0% {
+    right: -3px;
+    top: -4px;
+    transform: rotate(45deg);
+    background: #FFD500;
+  }
+  25% {
+    width: 3px;
+    border-radius: 50%;
+    top: -20px;
+    left: 15px;
+  }
+  75% {
+    width: 3px;
+    border-radius: 50%;
+    top: 20px;
+    left: 15px;
+  }
+  100% {
+    right: -2px;
+    bottom: -5px;
+    transform: rotate(135deg);
+    height: 1px;
+    width: 15px;
+    background: #222222;
+  }
+}
+@keyframes animation-3-after-reverse {
+  0% {
+    left: -3px;
+    bottom: -4px;
+    transform: rotate(135deg);
+    height: 1px;
+    width: 15px;
+    background: #222222;
+  }
+  50% {
+    width: 3px;
+    border-radius: 50%;
+    top: -20px;
+    left: 15px;
+  }
+  100% {
+    right: -3px;
+    top: -4px;
+    transform: rotate(45deg);
+  }
+}
+@keyframes animation-3-before-reverse {
+  0% {
+    left: -3px;
+    bottom: -4px;
+    transform: rotate(-135deg);
+    height: 1px;
+    width: 15px;
+    background: #222222;
+  }
+  50% {
+    width: 3px;
+    border-radius: 50%;
+    bottom: -20px;
+    left: 15px;
+  }
+  100% {
+    right: -3px;
+    bottom: -4px;
+    transform: rotate(-45deg);
+  }
+}
+.viewProfileDiv{
+  padding: 0px 10px;
+    justify-content: center;
+    align-items:center;
+    margin-right:10px;
 }

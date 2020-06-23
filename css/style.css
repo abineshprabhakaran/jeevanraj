@@ -722,3 +722,8 @@ body {
 a:focus{
   box-shadow:none !important;
 }
+.movingBg{
+  background-color: transparent;
+  position:fixed;
+  z-index:-1;
+}
